@@ -1,0 +1,357 @@
+================================================================================
+MULTILINGUAL INFORMATION FILE
+Languages: Thai | Indonesian | Vietnamese | Filipino
+Encoding: UTF-8
+================================================================================
+
+
+################################################################################
+THAI — ภาษาไทย
+################################################################################
+
+========================================
+ภูมิศาสตร์และประชากร
+========================================
+
+ประเทศไทยตั้งอยู่ในภูมิภาคเอเชียตะวันออกเฉียงใต้ มีพื้นที่ทั้งหมด 513,120 ตารางกิโลเมตร
+ประชากรของประเทศไทยมีประมาณ 71 ล้านคนในปี พ.ศ. 2567
+กรุงเทพมหานครเป็นเมืองหลวงและเมืองที่ใหญ่ที่สุดของประเทศ มีประชากรในเขตมหานครกว่า 15 ล้านคน
+ประเทศไทยมีพรมแดนติดกับประเทศเมียนมา ลาว กัมพูชา และมาเลเซีย
+ภาคใต้ของไทยมีชายฝั่งทะเลอ่าวไทยและทะเลอันดามัน รวมความยาวกว่า 3,219 กิโลเมตร
+แม่น้ำเจ้าพระยาเป็นแม่น้ำสายหลักของประเทศ ไหลจากภาคเหนือลงสู่อ่าวไทยที่กรุงเทพมหานคร
+ภาคเหนือมีภูเขาสูงและอากาศหนาวเย็น ส่วนภาคกลางเป็นที่ราบลุ่มแม่น้ำที่อุดมสมบูรณ์
+ดอยอินทนนท์ในจังหวัดเชียงใหม่เป็นยอดเขาที่สูงที่สุดในประเทศไทย มีความสูง 2,565 เมตรเหนือระดับน้ำทะเล
+
+========================================
+การเมืองและการปกครอง
+========================================
+
+ประเทศไทยปกครองในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข
+พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว รัชกาลที่ 10 ทรงเป็นพระมหากษัตริย์องค์ปัจจุบัน
+รัฐสภาไทยประกอบด้วยวุฒิสภาและสภาผู้แทนราษฎร
+ประเทศไทยแบ่งออกเป็น 77 จังหวัด โดยกรุงเทพมหานครมีฐานะพิเศษแตกต่างจากจังหวัดอื่น
+ระบบตุลาการของไทยประกอบด้วยศาลยุติธรรม ศาลปกครอง และศาลรัฐธรรมนูญ
+ไทยเป็นสมาชิกผู้ก่อตั้งของอาเซียนในปี พ.ศ. 2510 ร่วมกับประเทศอื่นอีก 4 ประเทศ
+กรุงเทพมหานครแบ่งการปกครองออกเป็น 50 เขต และเป็นที่ตั้งของหน่วยงานราชการสำคัญทั้งหมด
+
+========================================
+เศรษฐกิจไทย
+========================================
+
+ประเทศไทยมีผลิตภัณฑ์มวลรวมในประเทศ (GDP) ประมาณ 500,000 ล้านดอลลาร์สหรัฐในปี พ.ศ. 2566
+ไทยเป็นประเทศเศรษฐกิจที่ใหญ่เป็นอันดับสองในอาเซียนรองจากอินโดนีเซีย
+ภาคการท่องเที่ยวมีส่วนสำคัญต่อเศรษฐกิจ คิดเป็นประมาณร้อยละ 12 ของ GDP
+ในปี พ.ศ. 2562 ก่อนเกิดการระบาดของโควิด-19 มีนักท่องเที่ยวต่างชาติเยือนไทยกว่า 39 ล้านคน
+ไทยเป็นผู้ส่งออกข้าวรายใหญ่อันดับต้นของโลก โดยเฉพาะข้าวหอมมะลิซึ่งเป็นที่นิยมทั่วโลก
+อุตสาหกรรมยานยนต์เป็นภาคการผลิตที่สำคัญ ไทยได้รับฉายาว่า "ดีทรอยต์แห่งเอเชีย"
+ยางพาราและมันสำปะหลังเป็นพืชเกษตรส่งออกสำคัญของประเทศ
+ประเทศไทยมีสนามบินนานาชาติหลัก 2 แห่งในกรุงเทพฯ คือสุวรรณภูมิและดอนเมือง
+รัฐบาลไทยได้ประกาศนโยบาย Thailand 4.0 เพื่อขับเคลื่อนประเทศสู่เศรษฐกิจนวัตกรรมและดิจิทัล
+
+========================================
+วัฒนธรรม ศาสนา และประเพณี
+========================================
+
+ศาสนาพุทธนิกายเถรวาทเป็นศาสนาหลักของชาวไทยร้อยละ 95 ของประชากร
+ประเทศไทยมีวัดมากกว่า 40,000 แห่ง และพระภิกษุสงฆ์กว่า 300,000 รูป
+วัดพระแก้วหรือวัดพระศรีรัตนศาสดาราม ภายในพระบรมมหาราชวัง เป็นวัดที่ศักดิ์สิทธิ์ที่สุดในประเทศ
+เทศกาลสงกรานต์จัดขึ้นในวันที่ 13-15 เมษายนของทุกปี ถือเป็นวันปีใหม่ไทยตามประเพณี
+เทศกาลลอยกระทงจัดในคืนวันเพ็ญเดือน 12 ชาวไทยลอยกระทงเพื่อขอขมาพระแม่คงคา
+ประเพณีไหว้เป็นการทักทายด้วยการพนมมือ แสดงถึงความเคารพและความสุภาพที่ฝังลึกในวัฒนธรรมไทย
+นาฏศิลป์ไทยมีความงดงามและหลากหลาย รวมถึงโขน ระบำ รำไทย และหนังตะลุง
+มวยไทยหรือมวยไทยโบราณเป็นศิลปะการต่อสู้ประจำชาติที่ได้รับการยอมรับและนิยมฝึกทั่วโลก
+ภาษาไทยมีพยัญชนะ 44 ตัว สระ 32 รูป และวรรณยุกต์ 5 เสียง ใช้ระบบตัวอักษรที่พัฒนามาจากอักษรขอม
+
+========================================
+อาหารไทย
+========================================
+
+อาหารไทยมีชื่อเสียงไปทั่วโลกในด้านรสชาติจัดจ้าน หอมหวนด้วยสมุนไพรและเครื่องเทศ
+ต้มยำกุ้งเป็นซุปรสเปรี้ยวเผ็ดที่มีชื่อเสียงที่สุดของไทย ทำจากกุ้ง ตะไคร้ ใบมะกรูด และพริก
+ผัดไทยเป็นเส้นผัดที่ได้รับความนิยมสูงสุดในต่างประเทศ ทำจากเส้นจันท์ผัดกับไข่ ถั่วงอก และกุ้งแห้ง
+แกงเขียวหวาน แกงแดง และแกงมัสมั่นเป็นแกงไทยที่มีน้ำพริกแกงเป็นส่วนประกอบหลัก
+ส้มตำเป็นสลัดมะละกอดิบที่มีรสเปรี้ยวเผ็ดหวาน เป็นอาหารยอดนิยมทั้งในไทยและต่างประเทศ
+ข้าวมะม่วงหรือข้าวเหนียวมะม่วงเป็นของหวานไทยที่มีชื่อเสียงที่สุดในระดับนานาชาติ
+กะทิเป็นส่วนประกอบสำคัญในอาหารไทยหลายชนิด ทั้งแกง ขนมหวาน และเครื่องดื่ม
+อาหารไทยภาคเหนือมีเอกลักษณ์เฉพาะ เช่น ขนมจีนน้ำเงี้ยว แกงฮังเล และไส้อั่ว
+
+========================================
+การท่องเที่ยวและสถานที่สำคัญ
+========================================
+
+ประเทศไทยติดอันดับหนึ่งในสิบประเทศที่มีนักท่องเที่ยวเยือนมากที่สุดในโลก
+กรุงเทพมหานครได้รับการยกย่องให้เป็นเมืองที่มีผู้เยือนมากที่สุดในโลกหลายปีซ้อน
+วัดพระธาตุดอยสุเทพในเชียงใหม่เป็นสถานที่แสวงบุญสำคัญและจุดชมวิวที่งดงาม
+เกาะพีพี เกาะสมุย และเกาะช้างเป็นแหล่งท่องเที่ยวทางทะเลที่มีชื่อเสียงระดับโลก
+อุทยานประวัติศาสตร์อยุธยาและสุโขทัยได้รับการขึ้นทะเบียนเป็นมรดกโลก UNESCO
+พัทยา หัวหิน และกระบี่เป็นรีสอร์ทชายทะเลยอดนิยมที่รองรับนักท่องเที่ยวทั้งชาวไทยและต่างชาติ
+ตลาดน้ำดำเนินสะดวกในจังหวัดราชบุรีเป็นสัญลักษณ์ของวิถีชีวิตดั้งเดิมริมน้ำของคนไทย
+จังหวัดเชียงรายมีวัดร่องขุ่น หรือวัดขาว ที่มีความงดงามและเป็นเอกลักษณ์โดดเด่น
+
+
+################################################################################
+INDONESIAN — Bahasa Indonesia
+################################################################################
+
+========================================
+Geografi dan Kependudukan
+========================================
+
+Indonesia adalah negara kepulauan terbesar di dunia dengan lebih dari 17.000 pulau yang terbentang sepanjang 5.000 kilometer.
+Luas wilayah Indonesia mencapai 1.905.000 kilometer persegi, menjadikannya negara terluas ke-14 di dunia.
+Populasi Indonesia berjumlah sekitar 278 juta jiwa, menjadikannya negara berpenduduk keempat terbesar di dunia.
+Jakarta adalah ibu kota sekaligus kota terbesar dengan populasi metropolitan mencapai 34 juta jiwa.
+Pemerintah Indonesia sedang membangun ibu kota baru bernama Nusantara di Provinsi Kalimantan Timur.
+Indonesia terletak di antara dua benua (Asia dan Australia) dan dua samudra (Pasifik dan Hindia).
+Pulau Jawa adalah pulau paling padat penduduknya di dunia dengan lebih dari 151 juta jiwa.
+Gunung Puncak Jaya di Papua dengan ketinggian 4.884 meter adalah puncak tertinggi di Indonesia dan seluruh Oceania.
+
+========================================
+Sejarah dan Politik
+========================================
+
+Indonesia memproklamasikan kemerdekaannya pada 17 Agustus 1945, diumumkan oleh Soekarno dan Mohammad Hatta.
+Era Orde Lama di bawah kepemimpinan Presiden Soekarno berlangsung dari 1945 hingga 1966.
+Era Orde Baru di bawah Presiden Soeharto berlangsung dari 1966 hingga 1998, ditandai dengan pembangunan ekonomi pesat.
+Reformasi 1998 membawa Indonesia memasuki era demokrasi multipartai dengan pemilihan presiden langsung sejak 2004.
+Indonesia menganut sistem presidensial dengan presiden sebagai kepala negara sekaligus kepala pemerintahan.
+Dewan Perwakilan Rakyat (DPR) dan Dewan Perwakilan Daerah (DPD) membentuk Majelis Permusyawaratan Rakyat (MPR).
+Pancasila dan Undang-Undang Dasar 1945 adalah dasar negara dan konstitusi Indonesia.
+Indonesia adalah anggota G20 dan salah satu kekuatan ekonomi terbesar di Asia.
+
+========================================
+Ekonomi Indonesia
+========================================
+
+Indonesia adalah ekonomi terbesar di Asia Tenggara dengan PDB mencapai USD 1,4 triliun pada tahun 2023.
+Sektor pertanian menyumbang sekitar 13% dari PDB dan mempekerjakan lebih dari 28% angkatan kerja.
+Indonesia adalah produsen kelapa sawit terbesar di dunia, menghasilkan sekitar 46 juta ton per tahun.
+Indonesia juga merupakan penghasil nikel terbesar di dunia, yang strategis untuk baterai kendaraan listrik.
+Ekosistem startup Indonesia adalah yang paling berkembang di Asia Tenggara dengan lebih dari 2.400 startup aktif.
+Indonesia memiliki delapan unicorn startup yaitu Gojek, Tokopedia, Traveloka, Bukalapak, OVO, J&T Express, Xendit, dan Ajaib.
+Pada tahun 2021, Gojek dan Tokopedia bergabung membentuk GoTo Group, perusahaan teknologi terbesar di Asia Tenggara.
+Rupiah (IDR) adalah mata uang Indonesia, dengan Bank Indonesia sebagai bank sentral.
+
+========================================
+Keanekaragaman Budaya dan Bahasa
+========================================
+
+Indonesia memiliki lebih dari 1.300 suku bangsa dan lebih dari 700 bahasa daerah.
+Suku Jawa adalah suku terbesar dengan proporsi sekitar 40% dari total populasi, diikuti Sunda (15%) dan Batak (3,5%).
+Bahasa Indonesia, yang berakar dari Melayu Riau, menjadi bahasa persatuan sejak Sumpah Pemuda 1928.
+Semboyan "Bhinneka Tunggal Ika" berarti "Berbeda-beda tetapi tetap satu."
+Batik Indonesia diakui UNESCO sebagai Warisan Budaya Takbenda pada tahun 2009.
+Wayang kulit adalah seni pertunjukan bayangan boneka kulit dari Jawa, diakui UNESCO sejak 2003.
+Tari Saman dari Aceh dan Tari Kecak dari Bali adalah tarian tradisional Indonesia yang terkenal di dunia.
+Gamelan, ansambel musik tradisional Jawa dan Bali, telah mempengaruhi musik modern dunia.
+
+========================================
+Kuliner Nusantara
+========================================
+
+Masakan Indonesia sangat beragam mencerminkan kekayaan budaya dari Sabang sampai Merauke.
+Rendang dari Minangkabau, Sumatera Barat, terpilih sebagai makanan terenak di dunia versi CNN Travel pada 2017.
+Nasi goreng adalah hidangan nasional Indonesia yang dimasak dengan kecap, bawang, dan berbagai bahan pelengkap.
+Sate adalah tusukan daging yang dibakar dan disajikan dengan saus kacang atau kecap.
+Gado-gado adalah salad sayuran rebus khas Indonesia yang disirami saus kacang tanah.
+Tempeh (tempe) adalah makanan fermentasi kedelai asli Indonesia yang kini populer sebagai protein nabati dunia.
+Bakso, sup bola daging dengan mi, adalah jajanan favorit yang dijual di hampir setiap sudut kota.
+Gudeg dari Yogyakarta adalah masakan berbahan dasar nangka muda yang dimasak dalam santan dan gula aren.
+
+========================================
+Pendidikan dan Ilmu Pengetahuan
+========================================
+
+Indonesia memiliki lebih dari 4.500 perguruan tinggi termasuk universitas negeri, swasta, politeknik, dan akademi.
+Universitas Indonesia (UI) didirikan pada 1849 dan merupakan universitas tertua di Indonesia.
+Institut Teknologi Bandung (ITB) didirikan pada 1920 dan menghasilkan insinyur dan ilmuwan terkemuka.
+Angka melek huruf Indonesia mencapai 96% pada tahun 2023.
+Program beasiswa LPDP (Lembaga Pengelola Dana Pendidikan) telah membiayai lebih dari 40.000 mahasiswa berprestasi.
+Indonesia secara konsisten meraih medali di olimpiade sains internasional termasuk matematika, fisika, dan kimia.
+Kurikulum Merdeka yang diluncurkan tahun 2022 memberikan fleksibilitas bagi sekolah untuk menyesuaikan pembelajaran.
+Program Indonesia Pintar memberikan bantuan dana pendidikan kepada siswa dari keluarga kurang mampu.
+
+
+################################################################################
+VIETNAMESE — Tiếng Việt
+################################################################################
+
+========================================
+Địa lý và Dân số
+========================================
+
+Việt Nam nằm ở phía đông bán đảo Đông Dương, có diện tích 331.212 km², trải dài hơn 1.650 km từ Bắc vào Nam.
+Dân số Việt Nam đạt khoảng 98 triệu người năm 2024, là quốc gia đông dân thứ 15 trên thế giới.
+Hà Nội là thủ đô với dân số hơn 8 triệu người, trong khi TP.HCM là trung tâm kinh tế lớn nhất với hơn 9 triệu người.
+Việt Nam có đường bờ biển dài 3.260 km chạy dọc theo Biển Đông.
+Dãy Trường Sơn chạy dọc biên giới phía tây với đỉnh Fansipan cao 3.143 m là nóc nhà Đông Dương.
+Đồng bằng sông Cửu Long ở miền Nam là vựa lúa lớn nhất, cung cấp hơn 50% sản lượng lúa cả nước.
+Đồng bằng sông Hồng ở miền Bắc là trung tâm văn hóa, chính trị và cái nôi của nền văn minh Việt cổ.
+Việt Nam có khí hậu nhiệt đới gió mùa với bốn mùa rõ rệt ở miền Bắc và hai mùa mưa nắng ở miền Nam.
+
+========================================
+Lịch sử và Chính trị
+========================================
+
+Lịch sử Việt Nam có hơn 4.000 năm dựng nước, bắt đầu từ thời các Vua Hùng và nhà nước Văn Lang.
+Đất nước đã trải qua hơn 1.000 năm Bắc thuộc dưới ách đô hộ của phong kiến Trung Quốc từ 111 TCN đến 938 SCN.
+Chiến thắng Điện Biên Phủ ngày 7/5/1954 chấm dứt ách đô hộ của thực dân Pháp sau 80 năm.
+Ngày 30/4/1975 là ngày thống nhất hoàn toàn đất nước, kết thúc cuộc kháng chiến chống Mỹ kéo dài 20 năm.
+Chính sách Đổi Mới từ năm 1986 đã chuyển đổi Việt Nam từ kinh tế kế hoạch hóa sang kinh tế thị trường.
+Việt Nam là thành viên của ASEAN từ năm 1995 và WTO từ năm 2007.
+Quốc hội Việt Nam gồm 500 đại biểu, họp hai kỳ mỗi năm để thông qua luật và giám sát chính phủ.
+Việt Nam có quan hệ ngoại giao với hơn 190 quốc gia và vùng lãnh thổ trên thế giới.
+
+========================================
+Kinh tế Việt Nam
+========================================
+
+Việt Nam là một trong những nền kinh tế tăng trưởng nhanh nhất thế giới với GDP đạt hơn 430 tỷ USD năm 2023.
+Tốc độ tăng trưởng GDP bình quân của Việt Nam đạt 6-7% mỗi năm trong hai thập kỷ qua.
+Samsung Electronics đầu tư hơn 20 tỷ USD vào Việt Nam, sản xuất hơn 50% điện thoại Samsung tại đây.
+Việt Nam là nhà xuất khẩu cà phê Robusta lớn nhất thế giới, xuất khẩu đến hơn 80 quốc gia.
+Ngành dệt may và da giày đóng góp hơn 44 tỷ USD vào kim ngạch xuất khẩu năm 2023.
+Thương mại điện tử Việt Nam đạt doanh thu 20,5 tỷ USD năm 2023, tăng 25% so với năm trước.
+Shopee, Lazada, Tiki và TikTok Shop là bốn sàn thương mại điện tử lớn nhất tại Việt Nam.
+Đồng Việt Nam (VND) là đơn vị tiền tệ, với Ngân hàng Nhà nước Việt Nam điều hành chính sách tiền tệ.
+
+========================================
+Văn hóa và Nghệ thuật
+========================================
+
+Văn hóa Việt Nam chịu ảnh hưởng sâu sắc của Nho giáo, Phật giáo và Đạo giáo từ hàng nghìn năm.
+Áo dài là trang phục truyền thống đặc trưng, thường mặc trong các dịp lễ tết, hội nghị và cưới hỏi.
+Dân ca quan họ Bắc Ninh, Ca trù, Nhã nhạc cung đình Huế được UNESCO công nhận là Di sản văn hóa phi vật thể.
+Múa rối nước là loại hình nghệ thuật dân gian độc đáo xuất hiện từ thế kỷ 11 tại vùng đồng bằng sông Hồng.
+Tết Nguyên Đán là lễ hội quan trọng nhất, kéo dài từ 23 tháng Chạp đến hết mùng 10 tháng Giêng âm lịch.
+Văn học Việt Nam có truyền thống lâu đời với kiệt tác Truyện Kiều của đại thi hào Nguyễn Du.
+Chữ Quốc ngữ dựa trên bảng chữ cái Latin được xây dựng từ thế kỷ 17, giúp tỷ lệ biết chữ tăng nhanh.
+Tranh Đông Hồ và nghề thêu tay truyền thống là những nét tinh hoa của mỹ thuật dân gian Việt Nam.
+
+========================================
+Ẩm thực Việt Nam
+========================================
+
+Ẩm thực Việt Nam nổi tiếng thế giới với sự cân bằng hài hòa giữa các vị chua, cay, mặn, ngọt và umami.
+Phở là món súp nước dùng bò hoặc gà với bánh phở, được xem là biểu tượng ẩm thực Việt Nam trên toàn thế giới.
+Bánh mì Việt Nam kết hợp vỏ bánh mì Pháp giòn tan với nhân phong phú gồm thịt nguội, pate và rau thơm.
+Bún bò Huế là món bún nổi tiếng với nước dùng cay đặc trưng, nhiều loại thịt và giò heo.
+Gỏi cuốn là món cuốn nhẹ nhàng, lành mạnh gồm tôm, thịt, bún và rau thơm cuốn trong bánh tráng.
+Cà phê trứng Hà Nội là thức uống độc đáo kết hợp cà phê đen đậm với lớp kem trứng béo ngậy bên trên.
+Cao lầu là đặc sản Hội An với sợi mì dày dai, chỉ làm từ nước giếng Bá Lễ, không thể tìm thấy ở nơi khác.
+Chả cá Lã Vọng là món cá chiên sốt mắm tôm đặc trưng của Hà Nội, nổi tiếng từ đầu thế kỷ 20.
+
+========================================
+Du lịch và Di sản
+========================================
+
+Việt Nam có 8 Di sản Thế giới được UNESCO công nhận tính đến năm 2024.
+Vịnh Hạ Long với gần 2.000 hòn đảo đá vôi là biểu tượng du lịch Việt Nam, được công nhận từ năm 1994.
+Phố cổ Hội An với kiến trúc giao thoa Việt-Hoa-Nhật-Pháp nổi tiếng với đèn lồng và ẩm thực đặc sắc.
+Thánh địa Mỹ Sơn là quần thể đền tháp Champa từ thế kỷ 4 đến 13, được mệnh danh là Angkor Wat của Việt Nam.
+Cố đô Huế với Hoàng thành, lăng tẩm và đàn Nam Giao là trung tâm văn hóa thời nhà Nguyễn.
+Vườn quốc gia Phong Nha-Kẻ Bàng có hang Sơn Đoòng, hang động tự nhiên lớn nhất thế giới.
+Sapa với ruộng bậc thang mùa vàng và các bản làng dân tộc H'Mông là điểm đến nổi tiếng ở Tây Bắc.
+Phú Quốc, Đà Nẵng, Mũi Né và Côn Đảo là những bãi biển được bình chọn đẹp nhất khu vực Đông Nam Á.
+
+
+################################################################################
+FILIPINO — Filipino
+################################################################################
+
+========================================
+Heograpiya at Populasyon
+========================================
+
+Ang Pilipinas ay binubuo ng 7.641 na pulo na matatagpuan sa Timog-silangang Asya, may kabuuang lawak na 300.000 kilometro kwadrado.
+Ang populasyon ng Pilipinas ay umabot na sa halos 114 milyong tao noong 2024, ika-13 pinakamaydaming mamamayan sa buong mundo.
+Ang Maynila (Metro Manila) ang kabisera at pinakamalaking kalakhang lungsod, na may populasyong mahigit 14 milyong tao.
+Ang Luzon, Visayas, at Mindanao ang tatlong pangunahing grupo ng mga pulo ng Pilipinas.
+Ang Mount Apo sa Mindanao, na may taas na 2.954 metro, ang pinakamataas na bundok sa Pilipinas.
+Ang Pilipinas ay bahagi ng Pacific Ring of Fire, na may mahigit 220 na bulkano, 22 sa mga ito ay aktibo.
+Ang Pilipinas ay may isa sa pinakamahabang coastline sa mundo na may haba na 36.289 kilometro.
+Ang Laguna de Bay ang pinakamalaking lawa sa Pilipinas at isa sa pinakamalaking sa Asya.
+
+========================================
+Kasaysayan at Pulitika
+========================================
+
+Si Ferdinand Magellan ang unang Europeo na nakarating sa Pilipinas noong Marso 16, 1521, sa isla ng Homonhon sa Samar.
+Ang bansa ay naging kolonya ng Espanya sa loob ng 333 taon mula 1565 hanggang 1898.
+Si Dr. Jose Rizal ang pambansang bayani ng Pilipinas, sumulat ng Noli Me Tangere at El Filibusterismo.
+Ang Himagsikan ng 1896 na pinamunuan ni Andres Bonifacio at ng Katipunan ang nagbukas ng daan sa kalayaan.
+Ang kalayaan ng Pilipinas ay opisyal na ipinagdiwang noong Hulyo 4, 1946.
+Ang EDSA People Power Revolution noong Pebrero 1986 ay nagpaalis kay Pangulong Ferdinand Marcos pagkatapos ng 20 taon.
+Ang Pilipinas ay may sistema ng pamahalaan na may tatlong sangay: ehekutibo, lehislatibo, at hudikatura.
+Ang Pilipinas ay miyembro ng ASEAN, APEC, at United Nations, na aktibong kalahok sa mga internasyonal na usapin.
+
+========================================
+Ekonomiya ng Pilipinas
+========================================
+
+Ang Pilipinas ay isa sa pinakamabilis na lumalagong ekonomiya sa Asya na may GDP na halos USD 435 bilyon noong 2023.
+Ang paglago ng GDP ay naabot ang 5,5% noong 2023, mas mataas kaysa sa karaniwang paglago sa rehiyon.
+Ang overseas remittances mula sa mga OFW ay umaabot sa USD 36,1 bilyon noong 2023, isa sa pinakamalaking sa mundo.
+Mahigit 10 milyong Pilipino ang nagtatrabaho sa ibang bansa, bumubuo ng malaking bahagi ng ekonomiya.
+Ang IT-BPO industriya ay nagbibigay ng trabaho sa 1,7 milyong Pilipino at kumikita ng USD 35,9 bilyon bawat taon.
+Ang Pilipinas ay isa sa mga nangungunang producer ng niyog sa mundo, gumagawa ng halos 19 milyong tonelada bawat taon.
+Ang turismo ay nagbibigay ng malaking kontribusyon sa ekonomiya na may mahigit 5,4 milyong dayuhang turista noong 2023.
+Ang GCash at Maya ang pinakasikat na digital wallet na ginagamit ng milyun-milyong Pilipino para sa cashless payments.
+
+========================================
+Wika at Komunikasyon
+========================================
+
+Ang Filipino (batay sa Tagalog) at Ingles ang dalawang opisyal na wika ng Pilipinas ayon sa Konstitusyon.
+Ang Pilipinas ay may higit sa 170 natatanging wika at diyalekto, kabilang ang Cebuano, Ilocano, at Hiligaynon.
+Ang Cebuano ang pangalawang pinakamalawakang ginagamit na wika, lalo na sa Visayas at Mindanao.
+Ang Pilipinas ay isa sa mga bansang may pinakamaraming English speaker sa mundo na may mahigit 92 milyong nakakapagsalita.
+Ang Baybayin ang sinaunang sistemang pagsulat ng mga Pilipino bago dumating ang mga Español noong ika-16 siglo.
+Ang mga salitang Español ay malalim na naka-ugat sa Filipino, tulad ng silya, kutsara, mesa, at kuarto.
+Ang Filipino ay may natatanging mga salita tulad ng gigil, kilig, at lihi na walang direktang katumbas sa ibang wika.
+Ang Mother Tongue-Based Multilingual Education ay isinasagawa sa mga unang taon ng pag-aaral sa buong bansa.
+
+========================================
+Sining at Kultura
+========================================
+
+Ang kulturang Pilipino ay isang magandang halo ng mga tradisyong Malay, Tsino, Espanyol, at Amerikano.
+Ang Kundiman ay tradisyonal na uri ng awiting Filipino na nagpapahayag ng malalim na pagmamahal at pagiging makabayan.
+Ang OPM o Original Pilipino Music ay sumaklaw sa maraming genre mula folk at harana hanggang modernong pop at rock.
+Ang pagmamano, ang paghalik ng kamay ng matatanda, ay isang mahalagang tradisyon ng respeto sa Pilipinas.
+Ang Sinulog Festival sa Cebu, Ati-Atihan sa Kalibo, at Dinagyang sa Iloilo ay mga pinakamagandang festival sa Asya.
+Ang parol o parol ng Pasko ay simbolo ng Kapaskuhan sa Pilipinas, gawa sa kawayan at papel na may liwanag sa loob.
+Ang Filipino martial art na Arnis o Eskrima ay itinalagang pambansang sport ng Pilipinas at kilala sa buong mundo.
+Ang sining ng pagbuburdahe at paghahabi ng tela sa Pampanga, Laguna, at Ilocos ay may mayamang tradisyon.
+
+========================================
+Pagkain at Lutuin
+========================================
+
+Ang lutuing Pilipino ay mayamang pinagsama ng mga lasa ng Malay, Tsino, Espanyol, at Amerikano.
+Ang adobo ang itinuturing na pambansang pagkain, gawa sa manok o baboy na niluto sa suka, toyo, bawang, at paminta.
+Ang sinigang ay maasim na sabaw na kadalasang may baboy, hipon, o isda na niluto kasama ang sampalok o kamias.
+Ang lechon ay inihaw na buong baboy na may malutong na balat, isang paboritong ulam sa mga espesyal na okasyon.
+Ang kare-kare ay malapot na nilaga ng karne at gulay na may mani na sarsa, karaniwang kinakain kasama ang bagoong.
+Ang halo-halo ang pinakasikat na Pilipinong dessert, isang makulay na timpla ng mga prutas, gatas, sago, at sorbetes.
+Ang balut, isang fertilized na itlog ng pato, ay kilalang street food ng Pilipinas at kakaibang pagkain para sa mga bisita.
+Ang litson manok, pancit, lumpia, at bibingka ay ilan sa mga pagkaing Pilipino na naging popular sa buong mundo.
+
+========================================
+Kalikasan at Kapaligiran
+========================================
+
+Ang Pilipinas ay isa sa 17 megadiverse na bansa sa buong mundo na may napakayamang biodiversidad.
+Ang bansa ay tahanan ng mahigit 52.177 kilalang species ng halaman at hayop, marami ay endemic o tanging makikita sa Pilipinas.
+Ang Philippine Eagle ang pambansang ibon, isa sa pinakamalaki at pinakamakapangyarihang agila sa buong mundo.
+Ang Tubbataha Reef Natural Park sa Sulu Sea ay isang UNESCO World Heritage Site na may 600 species ng coral.
+Ang Philippine Tarsier na matatagpuan sa Bohol ay isa sa pinakamaliit na primate sa buong mundo.
+Ang Palawan ay madalas na pinipili bilang pinakamainam na isla sa mundo sa iba't ibang travel survey.
+Ang Puerto Princesa Subterranean River sa Palawan ay kabilang sa New Seven Wonders of Nature at UNESCO World Heritage Site.
+Ang pamahalaan ay naglalayong maabot ang 35% renewable energy sa pambansang grid sa pamamagitan ng geothermal, hydro, solar, at wind.
+
+================================================================================
+END OF FILE
+Languages: Thai, Indonesian, Vietnamese, Filipino
+Encoding: UTF-8
+================================================================================

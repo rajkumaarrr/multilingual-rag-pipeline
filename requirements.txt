@@ -1,0 +1,51 @@
+# ── Python version ────────────────────────────────────────────────
+# Developed and tested on Python 3.11.3
+# Minimum supported: Python 3.11
+
+# ── Core LangChain stack ──────────────────────────────────────────
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-ollama
+langchain-qdrant
+langchain-classic
+
+# ── Vector store ──────────────────────────────────────────────────
+qdrant-client
+
+# ── LLM observability ─────────────────────────────────────────────
+langsmith
+
+# ── Cache ─────────────────────────────────────────────────────────
+redis
+
+# ── Embeddings / Reranker ─────────────────────────────────────────
+# FlagEmbedding provides the BGE reranker (BAAI/bge-reranker-v2-m3)
+# Optional — pipeline runs without it (reranker is automatically disabled)
+FlagEmbedding
+
+# ── Document loaders ──────────────────────────────────────────────
+pymupdf                        # PDF text extraction (PyMuPDFLoader)
+unstructured[docx,md]          # DOCX and Markdown loading
+pandas                         # Excel (.xlsx / .xls) loading
+openpyxl                       # Excel engine used by pandas
+xlrd                           # Legacy .xls support
+
+# ── OCR (scanned PDFs and images) ────────────────────────────────
+Pillow                         # Image handling
+pdf2image                      # Converts PDF pages to images for OCR
+pytesseract                    # Python wrapper for Tesseract OCR engine
+# NOTE: Tesseract OCR binary must be installed separately — see README
+
+# ── Web scraping ──────────────────────────────────────────────────
+requests
+beautifulsoup4
+
+# ── Logging ───────────────────────────────────────────────────────
+loguru
+
+# ── Numerical helpers ─────────────────────────────────────────────
+numpy
+
+# ── Streamlit UI (app.py only) ────────────────────────────────────
+streamlit

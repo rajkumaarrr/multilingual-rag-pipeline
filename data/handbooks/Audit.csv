@@ -1,0 +1,101 @@
+Transaction_ID,Date,Department,Vendor,Category,Amount_USD,Receipt_Attached,Approval_Status
+TXN-001,1/4/2023,Sales,Delta Airlines,Travel,450.5,Yes,Approved
+TXN-002,1/5/2023,Engineering,AWS,Cloud Services,12500,Yes,Approved
+TXN-003,1/8/2023,Marketing,Facebook Ads,Advertising,3400,Yes,Approved
+TXN-004,1/10/2023,HR,WeWork,Office Rent,5000,Yes,Approved
+TXN-005,1/12/2023,Executive,Steakhouse 54,Meals,850,No,Approved
+TXN-006,1/15/2023,Engineering,Dell,Equipment,2400,Yes,Approved
+TXN-007,1/18/2023,Sales,Hertz,Travel,150,Yes,Approved
+TXN-008,1/20/2023,Finance,KPMG,Consulting,15000,Yes,Approved
+TXN-009,1/22/2023,Marketing,Google Ads,Advertising,4500.25,Yes,Approved
+TXN-010,1/25/2023,Operations,Staples,Office Supplies,120.75,Yes,Approved
+TXN-011,1/28/2023,Sales,Marriott,Travel,890,Yes,Approved
+TXN-012,2/1/2023,Engineering,GitHub,Software,400,Yes,Approved
+TXN-013,2/3/2023,HR,LinkedIn,Recruiting,1200,Yes,Approved
+TXN-014,2/5/2023,Marketing,Printful,Swag,650,Yes,Approved
+TXN-015,2/8/2023,Executive,Private Jet Charter,Travel,25000,No,Pending Review
+TXN-016,2/10/2023,Finance,QuickBooks,Software,150,Yes,Approved
+TXN-017,2/12/2023,Engineering,AWS,Cloud Services,12800,Yes,Approved
+TXN-018,2/15/2023,Sales,Salesforce,Software,8500,Yes,Approved
+TXN-019,2/18/2023,Operations,Uline,Shipping,340.5,Yes,Approved
+TXN-020,2/20/2023,Marketing,Facebook Ads,Advertising,3400,Yes,Approved
+TXN-021,2/22/2023,HR,Gusto,Payroll,450,Yes,Approved
+TXN-022,2/25/2023,Engineering,Apple,Equipment,3200,Yes,Approved
+TXN-023,2/28/2023,Sales,Uber,Travel,45.5,Yes,Approved
+TXN-024,3/2/2023,Executive,Four Seasons,Travel,1800,Yes,Approved
+TXN-025,3/5/2023,Operations,Staples,Office Supplies,500,No,Approved
+TXN-026,3/8/2023,Finance,KPMG,Consulting,15000,Yes,Approved
+TXN-027,3/10/2023,Marketing,HubSpot,Software,1200,Yes,Approved
+TXN-028,3/12/2023,Engineering,Datadog,Software,850,Yes,Approved
+TXN-029,3/15/2023,Sales,Delta Airlines,Travel,620,Yes,Approved
+TXN-030,3/18/2023,HR,Indeed,Recruiting,300,Yes,Approved
+TXN-031,3/20/2023,Executive,Steakhouse 54,Meals,920,No,Approved
+TXN-032,3/22/2023,Operations,FedEx,Shipping,110.25,Yes,Approved
+TXN-033,3/25/2023,Finance,Bloomberg,Subscriptions,2400,Yes,Approved
+TXN-034,3/28/2023,Marketing,Google Ads,Advertising,5000,Yes,Approved
+TXN-035,4/1/2023,Engineering,AWS,Cloud Services,13100,Yes,Approved
+TXN-036,4/3/2023,Sales,Marriott,Travel,1100,Yes,Approved
+TXN-037,4/5/2023,HR,WeWork,Office Rent,5000,Yes,Approved
+TXN-038,4/8/2023,Operations,Amazon,Office Supplies,345.6,Yes,Approved
+TXN-039,4/10/2023,Executive,Apple,Equipment,4500,Yes,Approved
+TXN-040,4/12/2023,Marketing,Mailchimp,Software,250,Yes,Approved
+TXN-041,4/15/2023,Finance,Stripe,Fees,890.5,Yes,Approved
+TXN-042,4/18/2023,Engineering,Atlassian,Software,1500,Yes,Approved
+TXN-043,4/20/2023,Sales,Uber,Travel,85,Yes,Approved
+TXN-044,4/22/2023,HR,Zoom,Software,199,Yes,Approved
+TXN-045,4/25/2023,Operations,Home Depot,Repairs,1500,No,Pending Review
+TXN-046,4/28/2023,Executive,Delta Airlines,Travel,1200,Yes,Approved
+TXN-047,5/1/2023,Marketing,Facebook Ads,Advertising,4100,Yes,Approved
+TXN-048,5/3/2023,Engineering,Slack,Software,850,Yes,Approved
+TXN-049,5/5/2023,Sales,Hertz,Travel,210,Yes,Approved
+TXN-050,5/8/2023,Finance,Deloitte,Consulting,22000,Yes,Approved
+TXN-051,5/10/2023,HR,LinkedIn,Recruiting,1200,Yes,Approved
+TXN-052,5/12/2023,Operations,Uline,Shipping,415,Yes,Approved
+TXN-053,5/15/2023,Executive,The Capital Grille,Meals,1150,No,Approved
+TXN-054,5/18/2023,Marketing,Google Ads,Advertising,4800,Yes,Approved
+TXN-055,5/20/2023,Engineering,AWS,Cloud Services,14000,Yes,Approved
+TXN-056,5/22/2023,Sales,Salesforce,Software,8500,Yes,Approved
+TXN-057,5/25/2023,Operations,FedEx,Shipping,205.15,Yes,Approved
+TXN-058,5/28/2023,Finance,QuickBooks,Software,150,Yes,Approved
+TXN-059,6/1/2023,Marketing,Facebook Ads,Advertising,3400,Yes,Approved
+TXN-060,6/3/2023,Engineering,Apple,Equipment,10000,No,Approved
+TXN-061,6/5/2023,HR,Gusto,Payroll,450,Yes,Approved
+TXN-062,6/8/2023,Sales,Uber,Travel,62.3,Yes,Approved
+TXN-063,6/10/2023,Executive,Four Seasons,Travel,1800,Yes,Approved
+TXN-064,6/12/2023,Operations,Staples,Office Supplies,320,Yes,Approved
+TXN-065,6/15/2023,Finance,KPMG,Consulting,15000,Yes,Approved
+TXN-066,6/18/2023,Marketing,HubSpot,Software,1200,Yes,Approved
+TXN-067,6/20/2023,Engineering,Datadog,Software,850,Yes,Approved
+TXN-068,6/22/2023,Sales,Delta Airlines,Travel,620,Yes,Approved
+TXN-069,6/25/2023,HR,Indeed,Recruiting,300,Yes,Approved
+TXN-070,6/28/2023,Executive,Steakhouse 54,Meals,920,No,Approved
+TXN-071,7/1/2023,Operations,FedEx,Shipping,110.25,Yes,Approved
+TXN-072,7/3/2023,Finance,Bloomberg,Subscriptions,2400,Yes,Approved
+TXN-073,7/5/2023,Marketing,Google Ads,Advertising,5000,Yes,Approved
+TXN-074,7/8/2023,Engineering,AWS,Cloud Services,13100,Yes,Approved
+TXN-075,7/10/2023,Sales,Marriott,Travel,1100,Yes,Approved
+TXN-076,7/12/2023,HR,WeWork,Office Rent,5000,Yes,Approved
+TXN-077,7/15/2023,Operations,Amazon,Office Supplies,345.6,Yes,Approved
+TXN-078,7/18/2023,Executive,Apple,Equipment,4500,Yes,Approved
+TXN-079,7/20/2023,Marketing,Mailchimp,Software,250,Yes,Approved
+TXN-080,7/22/2023,Finance,Stripe,Fees,890.5,Yes,Approved
+TXN-081,7/25/2023,Engineering,Atlassian,Software,1500,Yes,Approved
+TXN-082,7/28/2023,Sales,Uber,Travel,85,Yes,Approved
+TXN-083,8/1/2023,HR,Zoom,Software,199,Yes,Approved
+TXN-084,8/3/2023,Operations,Home Depot,Repairs,1500,No,Pending Review
+TXN-085,8/5/2023,Executive,Delta Airlines,Travel,1200,Yes,Approved
+TXN-086,8/8/2023,Marketing,Facebook Ads,Advertising,4100,Yes,Approved
+TXN-087,8/10/2023,Engineering,Slack,Software,850,Yes,Approved
+TXN-088,8/12/2023,Sales,Hertz,Travel,210,Yes,Approved
+TXN-089,8/15/2023,Finance,Deloitte,Consulting,22000,Yes,Approved
+TXN-090,8/18/2023,HR,LinkedIn,Recruiting,1200,Yes,Approved
+TXN-091,8/20/2023,Operations,Uline,Shipping,415,Yes,Approved
+TXN-092,8/22/2023,Executive,The Capital Grille,Meals,1150,No,Approved
+TXN-093,8/25/2023,Marketing,Google Ads,Advertising,4800,Yes,Approved
+TXN-094,8/28/2023,Engineering,AWS,Cloud Services,14000,Yes,Approved
+TXN-095,9/1/2023,Sales,Salesforce,Software,8500,Yes,Approved
+TXN-096,9/3/2023,Operations,FedEx,Shipping,205.15,Yes,Approved
+TXN-097,9/5/2023,Finance,QuickBooks,Software,150,Yes,Approved
+TXN-098,9/8/2023,Marketing,Facebook Ads,Advertising,3400,Yes,Approved
+TXN-099,9/10/2023,Engineering,Apple,Equipment,10000,No,Approved
+TXN-100,9/12/2023,Sales,Fake Vendor LLC,Consulting,9999.99,No,Approved
