@@ -29,6 +29,63 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+st.markdown("""
+<style>
+/* Custom App Background and Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+html, body, [class*="css"]  { font-family: 'Inter', sans-serif !important; }
+.stApp { background-color: #f8fafc; }
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Elegant Chat Bubbles */
+.stChatMessage {
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+[data-testid="stChatMessage"]:nth-child(odd) {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+[data-testid="stChatMessage"]:nth-child(even) {
+    background-color: #eef2ff;
+    border: 1px solid #e0e7ff;
+}
+
+/* Restyled Buttons */
+.stButton > button {
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+.stButton > button:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    box-shadow: 0 4px 6px rgba(59,130,246,0.1);
+}
+div[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #f0f0f0;
+}
+
+/* Hero Header */
+.hero-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(59,130,246,0.15);
+}
+.hero-header h1 { color: white !important; font-weight: 700; margin-bottom: 8px; font-size: 2.4em; }
+.hero-header p { font-size: 1.1em; opacity: 0.95; margin: 0; }
+</style>
+""", unsafe_allow_html=True)
+
 # ── LangSmith env vars — must be set before any LangChain import ─
 os.environ.setdefault("LANGCHAIN_TRACING_V2", "true")
 os.environ.setdefault("LANGCHAIN_ENDPOINT",   "https://api.smith.langchain.com")
@@ -484,218 +541,232 @@ def _mark_ready(vs, chunks):
 # SIDEBAR
 # ══════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.title("🔍 RAG Pipeline")
-    st.caption("Multilingual · SEA-LION · BGE-M3")
+    st.markdown("""<div style="text-align: center; padding-bottom: 20px;">
+        <h2 style="margin-bottom: 0;">🔍 RAG Pipeline</h2>
+        <p style="color: #666; font-size: 0.9em;">Multilingual · SEA-LION · BGE-M3</p>
+    </div>""", unsafe_allow_html=True)
 
     # ── Service status ────────────────────────────────────────────
-    st.subheader("Services")
-    c1, c2 = st.columns(2)
     try:
-        get_qdrant().get_collections(); c1.success("Qdrant ✓")
+        get_qdrant().get_collections(); q_ok = True
     except Exception:
-        c1.error("Qdrant ✗")
+        q_ok = False
     try:
-        get_redis().ping(); c2.success("Redis ✓")
+        get_redis().ping(); r_ok = True
     except Exception:
-        c2.error("Redis ✗")
+        r_ok = False
+        
+    status_html = f"""
+    <div style="display: flex; justify-content: space-around; background: #f8f9fa; padding: 10px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e9ecef;">
+        <div style="text-align: center;">
+            <span style="font-size: 1.2em;">{'🟢' if q_ok else '🔴'}</span><br>
+            <span style="font-size: 0.8em; color: #555;">Qdrant</span>
+        </div>
+        <div style="text-align: center;">
+            <span style="font-size: 1.2em;">{'🟢' if r_ok else '🔴'}</span><br>
+            <span style="font-size: 0.8em; color: #555;">Redis</span>
+        </div>
+    </div>
+    """
+    st.markdown(status_html, unsafe_allow_html=True)
 
-    st.divider()
-
-    # ══════════════════════════════════════════════════════════════
-    # OPTION 1 — Connect to existing index (fastest, no re-indexing)
-    # ══════════════════════════════════════════════════════════════
-    st.subheader("⚡ Connect to Existing Index")
-    st.caption("Already indexed? Connect without re-loading any files.")
-
-    if st.button("Connect", use_container_width=True, key="btn_connect"):
-        with st.spinner("Connecting to existing index…"):
-            try:
-                emb = get_embeddings()
-                vs  = QdrantVectorStore(
-                    client=get_qdrant(),
-                    collection_name=COLLECTION_NAME,
-                    embedding=emb,
-                )
-                _mark_ready(vs, [])   # no local chunks — keyword search disabled
-                logger.success("[APP] Connected to existing Qdrant index")
-                st.success("Connected! Start chatting.")
-                st.rerun()
-            except Exception as e:
-                st.error(f"Failed: {e}")
-
-    st.divider()
-
-    # ══════════════════════════════════════════════════════════════
-    # OPTION 2 — Load & Index from a directory
-    # ══════════════════════════════════════════════════════════════
-    st.subheader("📂 Load & Index Directory")
-    data_dir_input = st.text_input("Data directory", value=DATA_DIR, key="data_dir")
-    force_reindex  = st.checkbox("Force full reindex", value=False, key="force_reindex")
-
-    if st.button("Load & Index", use_container_width=True, key="btn_load"):
-        with st.spinner("Loading documents…"):
-            file_paths = [
-                p for p in glob(os.path.join(data_dir_input, "**", "*"), recursive=True)
-                if os.path.isfile(p) and Path(p).suffix.lower() in SUPPORTED
-            ]
-            if not file_paths:
-                st.warning(f"No supported files found in '{data_dir_input}'")
-                st.stop()
-
-            all_docs, load_log = [], []
-            prog = st.progress(0, text="Loading files…")
-            for i, path in enumerate(file_paths):
-                docs, msg = load_file(path)
-                all_docs.extend(docs)
-                load_log.append(f"{'✓' if docs else '✗'} {Path(path).name} — {msg}")
-                prog.progress((i+1) / len(file_paths),
-                              text=f"Loading {Path(path).name}…")
-            prog.empty()
-
-            new_chunks = chunk_docs(all_docs)
-            st.info(f"Chunked into {len(new_chunks)} pieces. Embedding & indexing…")
-
-            t0 = time.perf_counter()
-            vs = upsert_chunks(new_chunks, force_recreate=force_reindex)
-            elapsed = round(time.perf_counter() - t0, 2)
-
-            _mark_ready(vs, new_chunks)
-            st.session_state.load_log = load_log
-            logger.success(f"[APP] Indexed {len(new_chunks)} chunks in {elapsed}s")
-
-        st.success(f"✓ {len(new_chunks)} chunks indexed in {elapsed}s")
-
-    if st.session_state.load_log:
-        with st.expander("Load details", expanded=False):
-            for line in st.session_state.load_log:
-                st.text(line)
-
-    st.divider()
-
-    # ══════════════════════════════════════════════════════════════
-    # OPTION 3 — Upload individual files
-    # ══════════════════════════════════════════════════════════════
-    st.subheader("📤 Upload Files")
-    uploaded = st.file_uploader(
-        "Drop files here", accept_multiple_files=True,
-        type=["pdf", "txt", "docx", "md", "xlsx", "xls", "csv", "png", "jpg", "jpeg"],
-        key="uploader",
+    # ── Data Source Selector ──────────────────────────────────────
+    st.markdown("### 📥 Data Ingestion")
+    ingest_mode = st.radio(
+        "Select Method",
+        ["⚡ Connect Existing Index", "📂 Load Directory", "📤 Upload Files", "🌐 Scrape URL"],
+        label_visibility="collapsed"
     )
+    st.write("")
 
-    if uploaded and st.button("Index Uploaded Files", use_container_width=True, key="btn_upload"):
-        with st.spinner("Processing uploads…"):
-            upload_dir = Path("./data/_uploads")
-            upload_dir.mkdir(parents=True, exist_ok=True)
-            new_docs = []
-            for uf in uploaded:
-                save_path = upload_dir / uf.name
-                save_path.write_bytes(uf.read())
-                docs, msg = load_file(str(save_path))
-                new_docs.extend(docs)
-                st.write(f"✓ {uf.name} — {msg}")
+    if ingest_mode == "⚡ Connect Existing Index":
+        st.caption("Already indexed? Connect instantly without re-loading any files.")
+        if st.button("Connect Now", use_container_width=True, key="btn_connect"):
+            with st.spinner("Connecting to existing index…"):
+                try:
+                    emb = get_embeddings()
+                    vs  = QdrantVectorStore(
+                        client=get_qdrant(),
+                        collection_name=COLLECTION_NAME,
+                        embedding=emb,
+                    )
+                    _mark_ready(vs, [])   # no local chunks — keyword search disabled
+                    logger.success("[APP] Connected to existing Qdrant index")
+                    st.success("Connected! Start chatting.")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"Failed: {e}")
 
-            new_chunks = chunk_docs(new_docs)
-            t0 = time.perf_counter()
-            vs = upsert_chunks(new_chunks, force_recreate=False)
-            elapsed = round(time.perf_counter() - t0, 2)
+    elif ingest_mode == "📂 Load Directory":
+        st.caption("Load all documents from a folder.")
+        data_dir_input = st.text_input("Data directory", value=DATA_DIR, key="data_dir")
+        force_reindex  = st.checkbox("Force full reindex", value=False, key="force_reindex")
 
-            # Merge with existing chunks if pipeline was already ready
-            all_chunks = st.session_state.all_chunks + new_chunks
-            _mark_ready(vs, all_chunks)
-            logger.success(f"[APP] Upload: indexed {len(new_chunks)} chunks in {elapsed}s")
+        if st.button("Load & Index", use_container_width=True, key="btn_load"):
+            with st.spinner("Loading documents…"):
+                file_paths = [
+                    p for p in glob(os.path.join(data_dir_input, "**", "*"), recursive=True)
+                    if os.path.isfile(p) and Path(p).suffix.lower() in SUPPORTED
+                ]
+                if not file_paths:
+                    st.warning(f"No supported files found in '{data_dir_input}'")
+                    st.stop()
 
-        st.success(f"✓ {len(new_chunks)} chunks indexed in {elapsed}s")
+                all_docs, load_log = [], []
+                prog = st.progress(0, text="Loading files…")
+                for i, path in enumerate(file_paths):
+                    docs, msg = load_file(path)
+                    all_docs.extend(docs)
+                    load_log.append(f"{'✓' if docs else '✗'} {Path(path).name} — {msg}")
+                    prog.progress((i+1) / len(file_paths), text=f"Loading {Path(path).name}…")
+                prog.empty()
+
+                new_chunks = chunk_docs(all_docs)
+                st.info(f"Chunked into {len(new_chunks)} pieces. Embedding & indexing…")
+
+                t0 = time.perf_counter()
+                vs = upsert_chunks(new_chunks, force_recreate=force_reindex)
+                elapsed = round(time.perf_counter() - t0, 2)
+
+                _mark_ready(vs, new_chunks)
+                st.session_state.load_log = load_log
+                logger.success(f"[APP] Indexed {len(new_chunks)} chunks in {elapsed}s")
+
+            st.success(f"✓ {len(new_chunks)} chunks indexed in {elapsed}s")
+
+        if st.session_state.load_log:
+            with st.expander("Load details", expanded=False):
+                for line in st.session_state.load_log:
+                    st.text(line)
+
+    elif ingest_mode == "📤 Upload Files":
+        st.caption("Upload files directly.")
+        uploaded = st.file_uploader(
+            "Drop files here", accept_multiple_files=True,
+            type=["pdf", "txt", "docx", "md", "xlsx", "xls", "csv", "png", "jpg", "jpeg"],
+            key="uploader",
+        )
+
+        if uploaded and st.button("Index Uploaded Files", use_container_width=True, key="btn_upload"):
+            with st.spinner("Processing uploads…"):
+                upload_dir = Path("./data/_uploads")
+                upload_dir.mkdir(parents=True, exist_ok=True)
+                new_docs = []
+                for uf in uploaded:
+                    save_path = upload_dir / uf.name
+                    save_path.write_bytes(uf.read())
+                    docs, msg = load_file(str(save_path))
+                    new_docs.extend(docs)
+                    st.write(f"✓ {uf.name} — {msg}")
+
+                new_chunks = chunk_docs(new_docs)
+                t0 = time.perf_counter()
+                vs = upsert_chunks(new_chunks, force_recreate=False)
+                elapsed = round(time.perf_counter() - t0, 2)
+
+                # Merge with existing chunks if pipeline was already ready
+                all_chunks = st.session_state.all_chunks + new_chunks
+                _mark_ready(vs, all_chunks)
+                logger.success(f"[APP] Upload: indexed {len(new_chunks)} chunks in {elapsed}s")
+
+            st.success(f"✓ {len(new_chunks)} chunks indexed in {elapsed}s")
+            
+    elif ingest_mode == "🌐 Scrape URL":
+        st.caption("Extract content from a webpage.")
+        url_input = st.text_input("URL", placeholder="https://example.com", label_visibility="collapsed")
+        if st.button("Scrape & Index", use_container_width=True):
+            if not is_valid_url(url_input):
+                st.error("Please enter a valid http/https URL.")
+            elif not st.session_state.pipeline_ready:
+                st.warning("Please Connect to an Existing Index first.")
+            else:
+                with st.spinner(f"Scraping {url_input} …"):
+                    t0       = time.perf_counter()
+                    web_docs = scrape_url(url_input, st.session_state.scraped_urls, max_depth=1)
+                    if not web_docs:
+                        st.warning("No content extracted.")
+                    else:
+                        web_chunks = []
+                        for doc in web_docs:
+                            if doc.metadata.get("type") == "table":
+                                web_chunks.append(doc)
+                            else:
+                                web_chunks.extend(_SPLITTER.split_documents([doc]))
+                        vs = upsert_chunks(web_chunks, force_recreate=False)
+                        all_chunks = st.session_state.all_chunks + web_chunks
+                        _mark_ready(vs, all_chunks)
+                        elapsed = round(time.perf_counter() - t0, 2)
+                        pages   = sum(1 for d in web_docs if d.metadata.get("type") == "webpage")
+                        tables  = sum(1 for d in web_docs if d.metadata.get("type") == "table")
+                        st.success(f"✓ {len(web_chunks)} chunks in {elapsed}s — {pages} pages, {tables} tables")
 
     st.divider()
 
-    # ── Settings ──────────────────────────────────────────────────
-    st.subheader("Settings")
-    use_cache    = st.toggle("Use answer cache",  value=True)
-    use_reranker = st.toggle("Use reranker",       value=True)
-    show_sources = st.toggle("Show sources",       value=True)
-    show_timing  = st.toggle("Show response time", value=True)
+    # ── Advanced Options & Stats ──────────────────────────────────
+    with st.expander("⚙️ Advanced Options & Stats", expanded=False):
+        use_cache    = st.toggle("Use answer cache",  value=True)
+        use_reranker = st.toggle("Use reranker",       value=True)
+        show_sources = st.toggle("Show sources",       value=True)
+        show_timing  = st.toggle("Show response time", value=True)
+        
+        if st.session_state.pipeline_ready:
+            st.divider()
+            st.markdown("**Index Stats:**")
+            st.markdown(f"- Chunks indexed: `{len(st.session_state.all_chunks)}`")
+            st.markdown(f"- Queries answered: `{st.session_state.query_count}`")
+            st.markdown(f"- Excel rows: `{sum(1 for d in st.session_state.all_chunks if d.metadata.get('doc_type') == 'excel_row')}`")
 
-    st.divider()
-
-    # ── Stats ─────────────────────────────────────────────────────
-    if st.session_state.pipeline_ready:
-        st.subheader("Index Stats")
-        st.metric("Chunks indexed",   len(st.session_state.all_chunks))
-        st.metric("Queries answered", st.session_state.query_count)
-        st.metric("Excel rows", sum(
-            1 for d in st.session_state.all_chunks
-            if d.metadata.get("doc_type") == "excel_row"
-        ))
-
-    if st.button("🗑 Clear chat history", use_container_width=True):
-        st.session_state.messages = []
-        st.rerun()
+        st.divider()
+        if st.button("🗑 Clear Chat History", use_container_width=True):
+            st.session_state.messages = []
+            st.rerun()
 
 
 # ══════════════════════════════════════════════════════════════════
 # MAIN AREA
 # ══════════════════════════════════════════════════════════════════
-st.title("🌏 Multilingual RAG Chatbot")
-st.caption("English · Thai · Hindi · Tamil · Bengali · Filipino · Malay · Vietnamese · Indonesian")
+st.markdown("""
+<div class="hero-header">
+    <h1>🌏 Multilingual RAG Chatbot</h1>
+    <p>English · Thai · Hindi · Tamil · Bengali · Filipino · Malay · Vietnamese · Indonesian</p>
+</div>
+""", unsafe_allow_html=True)
 
 if not st.session_state.pipeline_ready:
-    st.info(
-        "👈 Choose an option in the sidebar to get started:\n\n"
-        "- **⚡ Connect** — attach to an existing Qdrant index instantly\n"
-        "- **📂 Load & Index** — load documents from a folder and build an index\n"
-        "- **📤 Upload Files** — upload files directly and index them",
-        icon="ℹ️",
-    )
+    st.markdown("""
+    <div style="background-color: #eef2ff; border-left: 5px solid #3b82f6; padding: 20px; border-radius: 8px; color: #1e3a8a;">
+        <h3 style="margin-top: 0; color: #1e3a8a;">👋 Welcome! Let's get started.</h3>
+        <p style="margin-bottom: 0;">Please select a Data Ingestion method from the sidebar to initialize the pipeline:</p>
+        <ul style="margin-bottom: 0; padding-left: 20px;">
+            <li style="margin-top: 8px;"><strong>⚡ Connect:</strong> Attach to an existing Qdrant index instantly.</li>
+            <li style="margin-top: 4px;"><strong>📂 Load & Index:</strong> Process documents from a given folder.</li>
+            <li style="margin-top: 4px;"><strong>📤 Upload Files:</strong> Drag and drop files directly.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ── OPTION 4 — Scrape a website ───────────────────────────────────
-with st.expander("🌐 Scrape a Website", expanded=False):
-    url_col, btn_col = st.columns([4, 1])
-    url_input = url_col.text_input("URL", label_visibility="collapsed",
-                                   placeholder="https://example.com")
-    if btn_col.button("Scrape", use_container_width=True):
-        if not is_valid_url(url_input):
-            st.error("Please enter a valid http/https URL.")
-        elif not st.session_state.pipeline_ready:
-            st.warning("Connect to an index first (use sidebar options).")
-        else:
-            with st.spinner(f"Scraping {url_input} …"):
-                t0       = time.perf_counter()
-                web_docs = scrape_url(url_input, st.session_state.scraped_urls, max_depth=1)
-                if not web_docs:
-                    st.warning("No content extracted.")
-                else:
-                    web_chunks = []
-                    for doc in web_docs:
-                        if doc.metadata.get("type") == "table":
-                            web_chunks.append(doc)
-                        else:
-                            web_chunks.extend(_SPLITTER.split_documents([doc]))
-                    vs = upsert_chunks(web_chunks, force_recreate=False)
-                    all_chunks = st.session_state.all_chunks + web_chunks
-                    _mark_ready(vs, all_chunks)
-                    elapsed = round(time.perf_counter() - t0, 2)
-                    pages   = sum(1 for d in web_docs if d.metadata.get("type") == "webpage")
-                    tables  = sum(1 for d in web_docs if d.metadata.get("type") == "table")
-                    st.success(
-                        f"✓ {len(web_chunks)} chunks in {elapsed}s "
-                        f"— {pages} pages, {tables} tables")
-
-st.divider()
+st.write("")
 
 # ── Chat history ──────────────────────────────────────────────────
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
+        
+        tags_html = ""
+        if msg.get("timing") and show_timing:
+            tags_html += f'<span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #cbd5e1;">⏱ {msg["timing"]}</span>'
+        if msg.get("cached"):
+            tags_html += f'<span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #bbf7d0;">⚡ Cached</span>'
+        if msg.get("reranked"):
+            tags_html += f'<span style="background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #fde047;">🎯 Reranked</span>'
+            
+        if tags_html:
+            st.markdown(f'<div style="margin-top: 8px; margin-bottom: 8px;">{tags_html}</div>', unsafe_allow_html=True)
+            
         if msg.get("sources") and show_sources:
             with st.expander("Sources", expanded=False):
                 for src in msg["sources"]:
-                    st.caption(f"📄 {src}")
-        if msg.get("timing") and show_timing:
-            st.caption(f"⏱ {msg['timing']}")
-        if msg.get("cached"):
-            st.caption("⚡ Served from cache")
-        if msg.get("reranked"):
-            st.caption("🎯 Reranker applied")
+                    st.markdown(f'<div style="font-size: 0.85em; color: #64748b; margin-bottom: 2px;">📄 {src}</div>', unsafe_allow_html=True)
 
 # ── Chat input ────────────────────────────────────────────────────
 if question := st.chat_input(
@@ -739,8 +810,10 @@ if question := st.chat_input(
             answer_ph.markdown(answer)
             wall   = round(time.perf_counter() - t_start, 3)
             timing = f"{wall}s (cached)"
-            st.caption("⚡ Served from cache")
-            if show_timing: st.caption(f"⏱ {timing}")
+            tags_html = f'<span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #bbf7d0;">⚡ Cached</span>'
+            if show_timing:
+                tags_html += f'<span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #cbd5e1;">⏱ {timing}</span>'
+            st.markdown(f'<div style="margin-top: 10px;">{tags_html}</div>', unsafe_allow_html=True)
             logger.info(f"[CHAT] Cache hit in {wall}s")
 
         else:
@@ -782,16 +855,23 @@ if question := st.chat_input(
             sources = list(dict.fromkeys(
                 d.metadata.get("source", "unknown") for d in source_docs
             ))
+            
+            wall   = round(time.perf_counter() - t_start, 2)
+            timing = f"{wall}s"
+            
+            tags_html = ""
+            if show_timing:
+                tags_html += f'<span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #cbd5e1;">⏱ {timing}</span>'
+            if reranked:
+                tags_html += f'<span style="background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; border: 1px solid #fde047;">🎯 Reranked</span>'
+                
+            if tags_html:
+                st.markdown(f'<div style="margin-top: 10px; margin-bottom: 10px;">{tags_html}</div>', unsafe_allow_html=True)
+                
             if show_sources and sources:
                 with st.expander("Sources", expanded=False):
                     for src in sources:
-                        st.caption(f"📄 {src}")
-            if reranked:
-                st.caption("🎯 Reranker applied")
-
-            wall   = round(time.perf_counter() - t_start, 2)
-            timing = f"{wall}s"
-            if show_timing: st.caption(f"⏱ {timing}")
+                        st.markdown(f'<div style="font-size: 0.85em; color: #64748b; margin-bottom: 2px;">📄 {src}</div>', unsafe_allow_html=True)
 
             logger.info(f"[LLM] Answer: {answer[:150]!r}")
             logger.info(f"[CHAT] Total: {wall}s")
