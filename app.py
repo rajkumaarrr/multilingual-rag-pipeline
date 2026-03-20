@@ -32,57 +32,87 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* Custom App Background and Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-html, body, [class*="css"]  { font-family: 'Inter', sans-serif !important; }
-.stApp { background-color: #f8fafc; }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+html, body, [class*="css"]  { font-family: 'Outfit', sans-serif !important; }
+
+/* Off-white background */
+.stApp { background-color: #f4f6f9; }
+
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 
-/* Elegant Chat Bubbles */
+/* Liquid/Smooth Chat Bubbles */
 .stChatMessage {
-    border-radius: 12px;
-    padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    border-radius: 20px;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(10, 25, 47, 0.04);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+.stChatMessage:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(10, 25, 47, 0.08);
+}
+
+/* Assistant Bubble (Off-white) */
 [data-testid="stChatMessage"]:nth-child(odd) {
     background-color: #ffffff;
-    border: 1px solid #eaeaea;
+    border: 1px solid #eef0f3;
+    color: #0a192f;
+    border-radius: 20px 20px 20px 4px;
 }
+/* User Bubble (Navy Blue Gradient) */
 [data-testid="stChatMessage"]:nth-child(even) {
-    background-color: #eef2ff;
-    border: 1px solid #e0e7ff;
+    background: linear-gradient(135deg, #0a192f, #112240, #1d2d50);
+    color: #f8fafc;
+    border: none;
+    border-radius: 20px 20px 4px 20px;
+}
+[data-testid="stChatMessage"]:nth-child(even) p {
+    color: #f8fafc !important;
 }
 
-/* Restyled Buttons */
+/* Liquid/Smooth Buttons */
 .stButton > button {
-    border-radius: 8px !important;
+    border-radius: 14px !important;
     font-weight: 500 !important;
     background-color: #ffffff;
-    border: 1px solid #d1d5db;
-    transition: all 0.3s ease;
+    color: #0a192f;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .stButton > button:hover {
-    border-color: #3b82f6;
-    color: #3b82f6;
-    box-shadow: 0 4px 6px rgba(59,130,246,0.1);
-}
-div[data-testid="stSidebar"] {
-    background-color: #ffffff;
-    border-right: 1px solid #f0f0f0;
+    background-color: #0a192f;
+    color: #ffffff;
+    border-color: #0a192f;
+    box-shadow: 0 8px 20px rgba(10, 25, 47, 0.15);
+    transform: translateY(-2px) scale(1.02);
 }
 
-/* Hero Header */
-.hero-header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    padding: 35px 20px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(59,130,246,0.15);
+div[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #eef0f3;
 }
-.hero-header h1 { color: white !important; font-weight: 700; margin-bottom: 8px; font-size: 2.4em; }
-.hero-header p { font-size: 1.1em; opacity: 0.95; margin: 0; }
+
+/* Liquid Hero Header with animated background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.hero-header {
+    background: linear-gradient(-45deg, #0a192f, #112240, #233554, #1d2d50);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #f8fafc;
+    padding: 40px 25px;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(10, 25, 47, 0.15);
+}
+.hero-header h1 { color: #ffffff !important; font-weight: 600; margin-bottom: 12px; font-size: 2.8em; letter-spacing: -0.5px;}
+.hero-header p { font-size: 1.15em; opacity: 0.9; margin: 0; font-weight: 300; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -734,13 +764,13 @@ st.markdown("""
 
 if not st.session_state.pipeline_ready:
     st.markdown("""
-    <div style="background-color: #eef2ff; border-left: 5px solid #3b82f6; padding: 20px; border-radius: 8px; color: #1e3a8a;">
-        <h3 style="margin-top: 0; color: #1e3a8a;">👋 Welcome! Let's get started.</h3>
-        <p style="margin-bottom: 0;">Please select a Data Ingestion method from the sidebar to initialize the pipeline:</p>
-        <ul style="margin-bottom: 0; padding-left: 20px;">
-            <li style="margin-top: 8px;"><strong>⚡ Connect:</strong> Attach to an existing Qdrant index instantly.</li>
-            <li style="margin-top: 4px;"><strong>📂 Load & Index:</strong> Process documents from a given folder.</li>
-            <li style="margin-top: 4px;"><strong>📤 Upload Files:</strong> Drag and drop files directly.</li>
+    <div style="background-color: #ffffff; border-left: 6px solid #0a192f; padding: 25px; border-radius: 16px; color: #0a192f; box-shadow: 0 4px 20px rgba(10, 25, 47, 0.05); transition: transform 0.3s ease;">
+        <h3 style="margin-top: 0; color: #0a192f; font-family: 'Outfit', sans-serif;">👋 Welcome! Let's get started.</h3>
+        <p style="margin-bottom: 0; color: #475569;">Please select a Data Ingestion method from the sidebar to initialize the pipeline:</p>
+        <ul style="margin-bottom: 0; padding-left: 20px; color: #475569;">
+            <li style="margin-top: 8px;"><strong style="color: #0a192f;">⚡ Connect:</strong> Attach to an existing Qdrant index instantly.</li>
+            <li style="margin-top: 4px;"><strong style="color: #0a192f;">📂 Load & Index:</strong> Process documents from a given folder.</li>
+            <li style="margin-top: 4px;"><strong style="color: #0a192f;">📤 Upload Files:</strong> Drag and drop files directly.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
